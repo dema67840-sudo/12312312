@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Денис Чернушка Павлович</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0e14;
+            color: #f0f4fa;
+            line-height: 1.5;
+            padding: 24px 16px 40px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 440px;
+            margin: 0 auto;
+            background: #121821;
+            border-radius: 32px;
+            padding: 28px 22px 34px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            border: 1px solid #2a3340;
+            width: 100%;
+        }
+
+        .brand {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .brand h1 {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+            background: linear-gradient(135deg, #d4b48c, #f0d6b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .brand i {
+            font-size: 24px;
+            color: #d4b48c;
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(145deg, #1e2836, #141c26);
+            border-radius: 24px;
+            padding: 30px 22px 26px;
+            margin-bottom: 28px;
+            border: 1px solid #2e3a48;
+            box-shadow: inset 0 0 0 1px #2f3d4e;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "👋";
+            position: absolute;
+            right: 18px;
+            bottom: 16px;
+            font-size: 60px;
+            opacity: 0.12;
+            transform: rotate(-6deg);
+        }
+
+        .hero h2 {
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #f5e7d9;
+            margin-bottom: 8px;
+        }
+
+        .hero h2 span {
+            color: #d4b48c;
+        }
+
+        .hero p {
+            font-size: 20px;
+            font-weight: 400;
+            color: #b6c8e0;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero p i {
+            color: #d4b48c;
+            font-size: 22px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #2a3a4a;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #e8dccc;
+            margin-top: 14px;
+            border: 1px solid #3e5062;
+            letter-spacing: 0.3px;
+        }
+
+        .skills {
+            background: #141c26;
+            border-radius: 24px;
+            padding: 22px 20px;
+            margin-bottom: 28px;
+            border: 1px solid #2a3442;
+        }
+
+        .skills-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .skills-header i {
+            font-size: 28px;
+            color: #d4b48c;
+        }
+
+        .skills-header h3 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: #f0e3d4;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #1f2b39;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #d4dce8;
+            border: 1px solid #314155;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.2s;
+        }
+
+        .skill-tag i {
+            color: #d4b48c;
+            font-size: 16px;
+        }
+
+        .skill-tag:hover {
+            background: #2a3a4e;
+            border-color: #d4b48c;
+            color: #fff;
+        }
+
+        .skills-stats {
+            display: flex;
+            gap: 24px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #25303e;
+            font-size: 14px;
+            color: #9aafc7;
+            flex-wrap: wrap;
+        }
+
+        .skills-stats span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .skills-stats i {
+            color: #d4b48c;
+        }
+
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+
+        .card {
+            background: #121a24;
+            border-radius: 20px;
+            padding: 18px 18px 16px;
+            border: 1px solid #27323f;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            border-color: #d4b48c;
+            background: #17222e;
+        }
+
+        .card-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .card-title h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #f0e3d4;
+            letter-spacing: -0.2px;
+        }
+
+        .card-title i {
+            color: #d4b48c;
+            font-size: 18px;
+            opacity: 0.7;
+        }
+
+        .card p {
+            font-size: 15px;
+            color: #b0c2d8;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #d4b48c;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: 0.2s;
+        }
+
+        .card-link i {
+            font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .card-link:hover {
+            border-bottom-color: #d4b48c;
+        }
+
+        .card-link:hover i {
+            transform: translateX(4px);
+        }
+
+        .meta-icons {
+            display: flex;
+            gap: 18px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #25303e;
+            color: #7e93ab;
+            font-size: 14px;
+        }
+
+        .meta-icons span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .meta-icons i {
+            color: #d4b48c;
+            font-size: 15px;
+        }
+
+        .extra {
+            background: linear-gradient(135deg, #1b2533, #131c28);
+            border-radius: 24px;
+            padding: 22px 20px;
+            border: 1px solid #314154;
+            margin-top: 6px;
+        }
+
+        .extra h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #f0e3d4;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .extra h4 i {
+            color: #d4b48c;
+        }
+
+        .extra p {
+            color: #b6c8e0;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .extra .highlight-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 4px;
+        }
+
+        .extra .highlight {
+            background: #1f2d3d;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #d4b48c;
+            border: 1px solid #3c5068;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .extra .highlight i {
+            font-size: 14px;
+        }
+
+        .extra .quote {
+            font-style: italic;
+            color: #d4dce8;
+            padding: 12px 16px;
+            background: #0f1822;
+            border-radius: 16px;
+            border-left: 3px solid #d4b48c;
+            margin-top: 16px;
+        }
+
+        .footer {
+            margin-top: 28px;
+            font-size: 14px;
+            color: #5f748b;
+            text-align: center;
+            border-top: 1px solid #212d3b;
+            padding-top: 22px;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+        }
+
+        .footer span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer i {
+            color: #d4b48c;
+            font-size: 15px;
+        }
+
+        @media (max-width: 450px) {
+            .container {
+                padding: 18px 14px 24px;
+            }
+            .hero h2 {
+                font-size: 26px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .skills-header h3 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="brand">
+        <h1><i class="fas fa-user-astronaut" style="margin-right: 8px; background: none; -webkit-text-fill-color: #d4b48c;"></i> Денис Чернушенко Павлович</h1>
+        <i class="fas fa-code"></i>
+    </div>
+
+    <!-- Только приветствие -->
+    <div class="hero">
+        <h2>Денис, привет <span>👋</span></h2>
+        <p>
+            <i class="fas fa-hand-peace"></i> Как дела?
+             <i class="fas fa-hand-peace"></i> Чо ты пидарас ?
+        </p>
+      
+    </div>
+
+    <!-- Блок "Видал чо могу" -->
+    <div class="skills">
+        <div class="skills-header">
+            <i class="fas fa-eye"></i>
+            <h3>Видал чо могу</h3>
+        </div>
+   
+
+
+</div>
+</body>
+</html>
